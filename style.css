@@ -1,0 +1,7 @@
+body{
+    background-color: blue;
+    background-image: url('assets/img/demo\ person.gif'),url(),url();
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: left top,left bottom;
+}
