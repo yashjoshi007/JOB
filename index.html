@@ -6,55 +6,107 @@
         <title>JOB HUT!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+      
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
         
     </head>
 
     <body>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100px;">
-                <img src="assets/img/demo person.gif" style="width: 100px;">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 800px;" >
-                  <ul class="navbar-nav mr-auto" >
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+              <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #6718a8 !important;">
+                  <div class="navbar-brand">
+                    <img src="assets/img/icon.png" style="width: 70px;margin-left:5px;margin-top: -25px;"> 
+                  </div>
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:750px;" >
+                      <ul class="navbar-nav mr-auto" >
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                            
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">SignUp</a>
+                          </li>
                         
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">SignUp</a>
-                      </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" id="feedback" href="#">Feedback!</a>
-                      </li>
-                  </ul>
-                </div>
-              </nav>
-
+                        <li class="nav-item">
+                            <a class="nav-link" id="feedback" href="#">Feedback!</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </nav>
+                <label  id="dark-change" data-toggle="tooltip" title="It is sunny."></label>
+              </header>      
         <main>
             <div style="margin-left: 30px;">
-                <h1 style="color: rgb(255, 255, 255);font-size: 40px;">Hire the best workers  for any job or get yourself hired, online.</h1>
+                <h1 >Hire the best workers  for any job or get yourself hired, online. <button type="button" class="btn btn-outline ">About us</button>
+                </h1>
+                
+                <img src = "assets/img/Job hunt.gif" id="frntimg" style="margin-left: 210px;">
             </div>
+        
+            <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
         </main>
-
+        
+        <div style="position: relative;float: left;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+        <div style="background-color: rgba(0, 0, 0, 0.096);">
+          <h2 >CONTENT</h2>
+        </div>
+      </div>
         <footer></footer>
 
     </body>
     <script src="firebase.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</html>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      function toggleImg() {
+      let initialImg = document.getElementById("frntimg").src;
+      let srcTest = initialImg.includes('assets/img/Job hunt.gif');
+      let newImg = {
+        'true':'assets/img/Job hunt.gif', 
+        'false':'assets/img/Job hunt.gif (1)'}[srcTest];
+        return newImg;
+}
+      var x = document.getElementById("frntimg");
+      var content = document.getElementsByTagName('body')[0];
+      var darkMode = document.getElementById('dark-change');
+      darkMode.addEventListener('click', function(){
+          darkMode.classList.toggle('active');
+          content.classList.toggle('night');
+      })
+  </script>
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    </html>
